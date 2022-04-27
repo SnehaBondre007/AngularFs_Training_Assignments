@@ -12,6 +12,4 @@ export class EmpComponent {
   public empJob:string ="Manger";
   public empSalary:number = 75000;
   public empDep:number = 10;
-
-
 }
