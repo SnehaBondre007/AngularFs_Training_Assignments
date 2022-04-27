@@ -1,0 +1,19 @@
+<p>products works!</p>
+
+<table border="2">
+    <tr>
+        <th> Product Id </th>
+        <th> Product Name </th>
+        <th> Product Price </th>
+        <th> Product Category </th>
+        <th> Product Quantity </th>
+    </tr>
+    <tr *ngFor="let item of productsArray">
+        <td> {{item.pid}} </td>
+        <td> {{item.pname}} </td>
+        <td> {{item.price}} </td>
+        <td> {{item.category}} </td>
+        <td> {{item.qty}} </td>
+
+    </tr>
+</table>
