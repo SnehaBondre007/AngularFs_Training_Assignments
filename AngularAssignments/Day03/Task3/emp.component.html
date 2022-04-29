@@ -1,0 +1,40 @@
+<h3>Working with slice pipe in Angular</h3>
+<hr/>
+
+
+Filter Property  :
+  <select [(ngModel)]="filterMin">
+     <option>900</option>
+     <option>1000</option>
+     <option>1200</option>
+</select>
+
+Filter value  :
+  <select [(ngModel)]="filterMax">
+    <option>1000</option>
+    <option>1200</option>
+    <option>1500</option>
+    <option>2000</option>
+</select>
+
+<button (click)="filterData_click()">Filter Data</button>
+ <br/><br/>
+ <table width="500"  cellspacing="0"  cellpadding="3"  border="2">
+  <tr>
+    <th>Emp Number</th>
+    <th>Emp Name</th>
+    <th>Emp Job</th>
+    <th>Emp Salary</th>
+    <th>Emp Deptno</th>
+  </tr>
+
+  <tr *ngFor="let item of empsArray | filter: min : max ">
+      <td>{{item.empno}}</td>
+      <td>{{item.ename | titlecase}}</td>
+      <td>{{item.job | uppercase}}</td>
+      <td>{{item.sal | currency}}</td>
+      <td>{{item.deptno}}</td>
+  </tr>
+</table>
+
+<hr/>
