@@ -1,0 +1,26 @@
+
+<h1 align = "center" > User Records </h1>
+
+<hr/>
+
+<button  *ngIf="end != usersArray.length" (click)="nextUsers_click()" >Next >> </button>
+<br/><br/>
+<style>
+    .c1
+    {
+        border: 1px solid gray;
+        border-radius : 10px;
+        width : 150px;
+        padding : 5px;
+        text-align: center;
+        margin: 5px;
+        float:left;
+        box-shadow: 5px 5px 2px black;
+    }
+  </style>
+  
+  <div  *ngFor="let userObj of usersArray  | slice : start : end" class="c1">
+    <h3 style="margin: 2px;color:Red;"> {{userObj.srno}} </h3>
+    <u> User Name :   {{userObj.uname | uppercase}} </u>  <br/>
+    User Section : <span style="color:Green;"> {{userObj.section}} </span>   <br/>
+  </div>

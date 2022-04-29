@@ -1,0 +1,14 @@
+<h1 align = "center"> Employee Details </h1>
+
+<table align = "center" border="4" width="300">
+    <tr align = "center">
+        <th> Sr No </th>
+        <th> Employee Name </th>
+        <th> Grades </th>
+        
+    </tr>
+    <tr *ngFor="let emp of empGradeArray">
+        <td> {{emp.srno }} </td>
+        <td> {{emp.ename }} </td>
+        <td> {{emp.grade | gradepipe  }} </td>
+    </tr>
