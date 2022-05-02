@@ -1,0 +1,106 @@
+<style>
+    .bg1{ background-color :  lightblue;  }
+    .bg2{ background-color :  lightgreen;  }
+    .bg3{ background-color :  pink;  }
+  
+    .c1
+    {
+      color : dodgerblue;
+      border:1px solid dodgerblue;
+      width :  140px;
+      margin : 50px;
+      float : left;
+      text-align : center;
+      background-color : white;
+    }
+  
+    .c2
+    {
+       background-color: dodgerblue;
+       color : white;
+       margin: 0px;
+    }
+  
+    .img { 
+        display: inline-block; 
+        height:100px; 
+        width:100px; 
+        background-color:grey; 
+        margin-right:50px; 
+} 
+    
+  </style>
+  
+  <h3 align = "center">Working with directives in Angular -- Multiple display models</h3>
+  <hr/>
+  
+  
+  Select Display Mode : 
+  <img (mouseover)="displayMode='Details'" src="assets/table.png" width="30 " alt="details"/>
+  <img (mouseover)="displayMode='Large Image'" src="assets/large.png" width="30 " alt="details" />
+  <img (mouseover)="displayMode='Small Image'" src="assets/small.png" width="25 " alt="details" />
+  <img (mouseover)="displayMode='List'" src="assets/list.png" width="30 " alt="details" />
+  <hr/>
+  
+  <section  [ngSwitch]="displayMode">
+  
+    <!-- Content for List Mode -->
+      <article *ngSwitchCase=" 'List' ">
+      <ul >
+        <li *ngFor="let item of productsArray">
+            The Product
+            <span style="color:blue;text-decoration: underline;">{{item.pname}}</span>
+            has price of
+            <span [ngStyle]="{ 'color': (item.course == 'Angular' ? 'Red' : 'Green'), 'font-style': 'italic'}">{{item.price}}</span>
+            course.
+        </li>
+      </ul>
+    </article>
+    
+    <!-- Content for Table Mode -->
+      <article *ngSwitchCase=" 'Details' ">
+  
+      <table align="center" border="2" cellspacing="0" cellpadding="5" width="500">
+        <tr class="bg1">
+          <th>P.No</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Category</th>
+          <th>Product Quantity</th>
+        </tr>
+  
+        <tr *ngFor="let item of productsArray; let i = index; let isEven = even; let isOdd = odd"
+            [ngClass]="{'bg2':isEven, 'bg3':isOdd}">
+          <td>{{i + 1}}</td>
+          <td>{{item.pname}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.category}}</td>
+          <td>{{item.qty}}</td>
+        </tr>
+  
+      </table>
+    </article>
+  
+      <article *ngSwitchCase=" 'Large Image' ">
+  
+      <div class="c1" *ngFor="let item of productsArray">
+        <p  class="c2">{{item.pname}}</p>
+        <img src="assets/Products.png" alt="" width="100" />
+        <span>{{item.price}}</span> Rs
+        <br/>
+      </div>
+  
+     </article>
+     <article *ngSwitchCase=" 'Small Image' ">
+  
+        <div class="c1" *ngFor="let item of productsArray">
+          <p  class="c2">{{item.pname}}</p>
+          <img src="assets/Products.png" alt="" width="50" /> <br/>
+          <span>{{item.category}}</span> <br/>
+          <span>{{item.price}}</span> Rs
+          <br/>
+        </div>
+    
+       </article>
+      <article *ngSwitchDefault> This is default mode </article>
+  </section>
