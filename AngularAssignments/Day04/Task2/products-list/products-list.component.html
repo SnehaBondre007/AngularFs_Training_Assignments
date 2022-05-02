@@ -1,0 +1,24 @@
+
+
+
+<h1 align = "center"> Product List</h1>
+    <div align = "center" id = "div1" *ngFor="let item of filteredProducts"  >
+      <div class="container" >
+         <h3><b>{{item.pname}}</b></h3>
+        <p>{{item.category}}</p>
+        <p>Price :{{item.price}} </p>
+        <p>Qty : {{item.qty}}   </p>
+      </div>
+    </div>
+    <style>
+        #div1
+        {
+          border: 1px solid gray;
+          margin: 5px;
+          border-radius: 5px;
+          text-align: center;
+          color :  blue;
+          box-shadow: 5px 5px 5px gray;
+        }
+      </style>
+      
