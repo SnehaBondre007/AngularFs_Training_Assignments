@@ -1,0 +1,74 @@
+{
+  "emp": [
+    {
+      "id": 1,
+      "ename": "Scott",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 25
+    },
+    {
+      "id": 2,
+      "ename": "John",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 35
+    },
+    {
+      "id": 3,
+      "ename": "Mark",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 45
+    },
+    {
+      "id": 4,
+      "ename": "Steven",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 35
+    },
+    {
+      "id": 5,
+      "ename": "Max",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 25
+    },
+    {
+      "id": 6,
+      "ename": "Kevin",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 35
+    },
+    {
+      "id": 7,
+      "ename": "Alex",
+      "job": "Manager",
+      "sal": "33",
+      "deptno": "333"
+    },
+    {
+      "id": 8,
+      "ename": "Dave",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 25
+    },
+    {
+      "id": 9,
+      "ename": "Gandalf",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 25
+    },
+    {
+      "id": 10,
+      "ename": "Sauron",
+      "job": "Manager",
+      "sal": 23000,
+      "deptno": 25
+    }
+  ]
+}
