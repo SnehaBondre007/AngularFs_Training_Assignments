@@ -8,7 +8,7 @@ appShadow:string ="";
 
 constructor(private elem: ElementRef, private renderer: Renderer2) { }
 
-shadow:string = "text-shadow: 2px 2px 4px #000000;";
+shadow:string = "text-shadow: 2px 3px 1px;";
 ngOnInit() {
   if(this.appShadow == "")
      {
