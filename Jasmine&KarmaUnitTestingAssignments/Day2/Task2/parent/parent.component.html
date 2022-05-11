@@ -1,0 +1,4 @@
+<app-child  *ngFor="let item of prodsArray"
+								[productObj]="item"
+								(onProductRemoved)="removeProduct($event)">
+		</app-child>
