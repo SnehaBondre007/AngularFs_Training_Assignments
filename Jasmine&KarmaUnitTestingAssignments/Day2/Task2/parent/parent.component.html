@@ -1,0 +1,4 @@
+<app-child  *ngFor="let item of empsArray"
+								[empObj]="item"
+								(onEmpRemoved)="removeEmp($event)">
+		</app-child>
