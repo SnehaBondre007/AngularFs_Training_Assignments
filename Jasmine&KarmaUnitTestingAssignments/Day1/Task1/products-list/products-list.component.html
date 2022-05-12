@@ -1,0 +1,18 @@
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+<div class="classform">
+  <h1 align="center">Product Purchase</h1>
+  <h3>Product Name  :</h3>    <input  type="text"  [(ngModel)]="pname"  />
+<br/><br/>
+<h3>Quantity  :  </h3> <input  type="text" [(ngModel)]="quantity" />
+<br/><br/>
+<h3>Price  :  </h3> <input  type="text" [(ngModel)]="price" />
+<br/><br/>
+<button (click)="getTotalPrice()">Purchase</button>
+<p class="l1">{{totalPrice}}</p>
+</div>
+</body>
