@@ -1,0 +1,25 @@
+.c1
+    {
+      color : dodgerblue;
+      border:1px solid dodgerblue;
+      width :  140px;
+      margin : 50px;
+      float : left;
+      text-align : center;
+      background-color : white;
+    }
+  
+    .c2
+    {
+       background-color: dodgerblue;
+       color : white;
+       margin: 0px;
+    }
+  
+    .img { 
+        display: inline-block; 
+        height:100px; 
+        width:100px; 
+        background-color:grey; 
+        margin-right:50px; 
+} 
